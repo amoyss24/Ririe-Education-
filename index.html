@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Personal Blog Syarifah Ni'mah - Hidden Gem & Lifestyle Lokal">
+    <title>Syarifah Ni'mah | Hidden Gem & Lifestyle Lokal</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           DASAR WEBSITE
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f3e6d2;
+            color: #3a2419;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1100px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 13px 22px;
+
+            background: rgba(250, 242, 228, 0.94);
+            border: 1px solid #8b654b;
+            border-radius: 50px;
+
+            box-shadow: 0 10px 25px rgba(50, 30, 20, 0.12);
+
+            z-index: 999;
+
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav-menu a {
+            font-size: 13px;
+            padding: 8px 14px;
+            border-radius: 30px;
+            transition: 0.3s;
+            color: #6d503d;
+        }
+
+        .nav-menu a:hover {
+            background: #3a2419;
+            color: white;
+        }
+
+        /* =========================
+           SECTION UMUM
+        ========================= */
+
+        section {
+            min-height: 100vh;
+            padding: 120px 8% 80px;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .label {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #8a6045;
+            font-weight: 600;
+        }
+
+        .label::before {
+            content: "✦ ";
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Cormorant Garamond", serif;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background:
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(130, 88, 55, 0.12) 0 2px,
+                    transparent 3px
+                ),
+                #f3e6d2;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .hero h1 {
+            font-size: clamp(70px, 10vw, 145px);
+            line-height: 0.78;
+            color: #3a2419;
+            margin: 25px 0;
+            letter-spacing: -5px;
+        }
+
+        .hero h1 span {
+            display: block;
+            margin-left: 15%;
+            color: #795438;
+            font-size: 0.55em;
+            font-style: italic;
+        }
+
+        .hero-text {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 25px;
+            line-height: 1.4;
+            color: #725a49;
+            max-width: 580px;
+        }
+
+        .hero-card {
+            border: 1px solid #795438;
+            padding: 35px;
+            background: #ead7bc;
+            transform: rotate(3deg);
+            box-shadow: 15px 15px 0 #3a2419;
+        }
+
+        .hero-card h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero-card p {
+            line-height: 1.7;
+            color: #6e5140;
+        }
+
+        .hero-card .number {
+            display: block;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 90px;
+            line-height: 0.8;
+            color: #b48c68;
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           BIODATA
+        ========================= */
+
+        .biodata {
+            background: #3a2419;
+            color: #fff9ee;
+        }
+
+        .biodata-layout {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .biodata h2 {
+            font-size: clamp(60px, 8vw, 110px);
+            line-height: 0.8;
+            margin: 25px 0;
+        }
+
+        .biodata-intro {
+            color: #d7c0a6;
+            line-height: 1.8;
+        }
+
+        .data-list {
+            border-top: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .data-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+
+            padding: 22px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .data-row .title {
+            color: #c39b76;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 11px;
+        }
+
+        .data-row .value {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 23px;
+        }
+
+        .contact {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .contact a {
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 30px;
+            padding: 11px 16px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .contact a:hover {
+            background: #fff9ee;
+            color: #3a2419;
+        }
+
+        /* =========================
+           INTRO LIFESTYLE
+        ========================= */
+
+        .lifestyle-intro {
+            text-align: center;
+            background: #fff8eb;
+        }
+
+        .lifestyle-intro h2 {
+            font-size: clamp(60px, 9vw, 130px);
+            line-height: 0.8;
+            margin: 30px 0;
+        }
+
+        .lifestyle-intro h2 em {
+            color: #805a3d;
+        }
+
+        .lifestyle-intro p {
+            max-width: 700px;
+            margin: auto;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 24px;
+            line-height: 1.5;
+            color: #765d4b;
+        }
+
+        /* =========================
+           KATEGORI
+        ========================= */
+
+        .categories {
+            background: #ead7bc;
+        }
+
+        .section-title {
+            font-size: clamp(60px, 8vw, 110px);
+            line-height: 0.8;
+            margin: 25px 0;
+        }
+
+        .category-grid {
+            margin-top: 50px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .category-card {
+            position: relative;
+            overflow: hidden;
+
+            min-height: 260px;
+
+            padding: 35px;
+
+            background: #fff8eb;
+
+            border: 1px solid #977358;
+
+            transition: 0.35s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 12px 14px 0 rgba(58,36,25,0.12);
+        }
+
+        .category-number {
+            position: absolute;
+            right: 20px;
+            top: 0;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 80px;
+
+            color: #dfc4a4;
+        }
+
+        .category-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .category-card h3 {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .category-card p {
+            color: #765d4b;
+            line-height: 1.7;
+            max-width: 450px;
+        }
+
+        /* =========================
+           REKOMENDASI
+        ========================= */
+
+        .recommendations {
+            background: #f3e6d2;
+        }
+
+        .recommendation-intro {
+            max-width: 700px;
+            color: #765d4b;
+            line-height: 1.7;
+        }
+
+        .place-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+
+            margin-top: 50px;
+        }
+
+        .place-card {
+            background: #fff8eb;
+            border: 1px solid #99745a;
+
+            overflow: hidden;
+
+            transition: 0.3s;
+        }
+
+        .place-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 10px 12px 0 rgba(58,36,25,0.12);
+        }
+
+        .place-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+
+            filter: sepia(10%) saturate(90%);
+        }
+
+        .place-content {
+            padding: 25px;
+        }
+
+        .tag {
+            display: inline-block;
+
+            padding: 6px 10px;
+
+            background: #dfc4a4;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .place-card h3 {
+            font-size: 35px;
+            margin: 15px 0 8px;
+        }
+
+        .place-card p {
+            color: #765d4b;
+            line-height: 1.65;
+        }
+
+        .place-info {
+            margin-top: 15px;
+            padding-top: 13px;
+
+            border-top: 1px dashed #b28f70;
+
+            color: #795438;
+            font-size: 12px;
+        }
+
+        /* =========================
+           QUOTE
+        ========================= */
+
+        .quote {
+            background: #805a3d;
+            color: #fff8eb;
+            text-align: center;
+        }
+
+        .quote h2 {
+            font-size: clamp(50px, 8vw, 105px);
+            line-height: 0.9;
+        }
+
+        .quote p {
+            max-width: 650px;
+            margin: 30px auto;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 24px;
+
+            color: #ead7bc;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 25px;
+            background: #261711;
+            color: #c7aa8d;
+            text-align: center;
+
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* =========================
+           ANIMASI
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            section {
+                padding: 110px 6% 70px;
+            }
+
+            .hero-content,
+            .biodata-layout,
+            .category-grid,
+            .place-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content {
+                gap: 55px;
+            }
+
+            .hero h1 {
+                font-size: 75px;
+            }
+
+            .biodata-layout {
+                gap: 50px;
+            }
+
+            .data-row {
+                grid-template-columns: 120px 1fr;
+            }
+
+            .nav-menu a {
+                padding: 7px 8px;
+                font-size: 11px;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .navbar {
+                width: 94%;
+            }
+
+            .nav-menu a:nth-child(2) {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 62px;
+            }
+
+            .hero-text {
+                font-size: 21px;
+            }
+
+            .hero-card {
+                padding: 25px;
+            }
+
+            .data-row {
+                grid-template-columns: 100px 1fr;
+            }
+
+            .data-row .value {
+                font-size: 19px;
+            }
+
+            .category-card {
+                padding: 25px;
+            }
+
+            .place-image {
+                height: 210px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            SN. JOURNAL
+        </a>
+
+        <div class="nav-menu">
+
+            <a href="#biodata">
+                Biodata
+            </a>
+
+            <a href="#lifestyle">
+                Lifestyle
+            </a>
+
+            <a href="#rekomendasi">
+                Rekomendasi
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HALAMAN 1
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container hero-content">
+
+            <div class="reveal">
+
+                <div class="label">
+                    Personal Journal
+                </div>
+
+                <h1>
+                    Syarifah
+                    <span>Ni'mah</span>
+                </h1>
+
+                <p class="hero-text">
+                    Sebuah ruang kecil untuk mengenal saya,
+                    menikmati cerita kehidupan, dan menemukan
+                    berbagai tempat menarik di sekitar Jakarta.
+                </p>
+
+            </div>
+
+
+            <div class="hero-card reveal">
+
+                <span class="number">
+                    01
+                </span>
+
+                <h2>
+                    Welcome to<br>
+                    my little journal.
+                </h2>
+
+                <p>
+                    Di sini saya berbagi sedikit tentang diri saya
+                    dan berbagai rekomendasi tempat yang menarik
+                    untuk dikunjungi, terutama bagi mahasiswa.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 2 — BIODATA
+    ========================== -->
+
+    <section class="biodata" id="biodata">
+
+        <div class="container biodata-layout">
+
+            <div class="reveal">
+
+                <div class="label">
+                    About Me
+                </div>
+
+                <h2>
+                    A little<br>
+                    about me.
+                </h2>
+
+                <p class="biodata-intro">
+                    Halo! Saya Syarifah Ni'mah.
+                    Saya adalah mahasiswa Manajemen Pendidikan
+                    yang tinggal di Jakarta.
+                    Selain menjalani aktivitas perkuliahan,
+                    saya juga tertarik dengan tempat-tempat
+                    menarik dan lifestyle lokal.
+                </p>
+
+                <div class="contact">
+
+                    <a href="tel:081991231007">
+                        ☎ 0819 9123 1007
+                    </a>
+
+                    <a href="mailto:syarifahriri24@gmail.com">
+                        ✉ Email
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="data-list reveal">
+
+                <div class="data-row">
+
+                    <span class="title">
+                        Nama
+                    </span>
+
+                    <span class="value">
+                        Syarifah Ni'mah
+                    </span>
+
+                </div>
+
+
+                <div class="data-row">
+
+                    <span class="title">
+                        Usia
+                    </span>
+
+                    <span class="value">
+                        20 tahun
+                    </span>
+
+                </div>
+
+
+                <div class="data-row">
+
+                    <span class="title">
+                        Tempat Tinggal
+                    </span>
+
+                    <span class="value">
+                        Jakarta
+                    </span>
+
+                </div>
+
+
+                <div class="data-row">
+
+                    <span class="title">
+                        Kampus
+                    </span>
+
+                    <span class="value">
+                        Universitas Islam Negeri Jakarta
+                    </span>
+
+                </div>
+
+
+                <div class="data-row">
+
+                    <span class="title">
+                        Jurusan
+                    </span>
+
+                    <span class="value">
+                        Manajemen Pendidikan
+                    </span>
+
+                </div>
+
+
+                <div class="data-row">
+
+                    <span class="title">
+                        Email
+                    </span>
+
+                    <span class="value">
+                        syarifahriri24@gmail.com
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 3 — INTRO LIFESTYLE
+    ========================== -->
+
+    <section class="lifestyle-intro" id="lifestyle">
+
+        <div class="container reveal">
+
+            <div class="label">
+                Local Journal
+            </div>
+
+            <h2>
+                Hidden Gem<br>
+                & <em>Lifestyle Lokal</em>
+            </h2>
+
+            <p>
+                Karena Jakarta bukan cuma tentang gedung tinggi
+                dan jalan yang ramai. Ada banyak sudut kecil,
+                tempat makan, ruang hijau, dan hidden gem
+                yang punya cerita sendiri.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 4 — KATEGORI
+    ========================== -->
+
+    <section class="categories">
+
+        <div class="container">
+
+            <div class="reveal">
+
+                <div class="label">
+                    Explore
+                </div>
+
+                <h2 class="section-title">
+                    Pick your<br>
+                    mood.
+                </h2>
+
+            </div>
+
+
+            <div class="category-grid">
+
+
+                <!-- KATEGORI 1 -->
+
+                <div class="category-card reveal">
+
+                    <div class="category-number">
+                        01
+                    </div>
+
+                    <div class="category-icon">
+                        ☕
+                    </div>
+
+                    <h3>
+                        Cafe & Kuliner
+                    </h3>
+
+                    <p>
+                        Membahas cafe baru, coffee shop,
+                        tempat makan viral, street food,
+                        dan berbagai kuliner unik
+                        yang menarik untuk dicoba.
+                    </p>
+
+                </div>
+
+
+                <!-- KATEGORI 2 -->
+
+                <div class="category-card reveal">
+
+                    <div class="category-number">
+                        02
+                    </div>
+
+                    <div class="category-icon">
+                        📍
+                    </div>
+
+                    <h3>
+                        Hidden Gem
+                    </h3>
+
+                    <p>
+                        Menemukan tempat-tempat menarik
+                        yang belum terlalu populer,
+                        mulai dari taman tersembunyi,
+                        spot foto, hingga tempat nongkrong unik.
+                    </p>
+
+                </div>
+
+
+                <!-- KATEGORI 3 -->
+
+                <div class="category-card reveal">
+
+                    <div class="category-number">
+                        03
+                    </div>
+
+                    <div class="category-icon">
+                        🌿
+                    </div>
+
+                    <h3>
+                        Healing & Leisure
+                    </h3>
+
+                    <p>
+                        Rekomendasi tempat untuk refreshing
+                        setelah kuliah atau kerja,
+                        seperti taman, ruang hijau,
+                        tempat santai, dan wisata lokal.
+                    </p>
+
+                </div>
+
+
+                <!-- KATEGORI 4 -->
+
+                <div class="category-card reveal">
+
+                    <div class="category-number">
+                        04
+                    </div>
+
+                    <div class="category-icon">
+                        💸
+                    </div>
+
+                    <h3>
+                        Budget-Friendly
+                    </h3>
+
+                    <p>
+                        Tempat-tempat yang ramah kantong mahasiswa,
+                        mulai dari cafe di bawah Rp50 ribu,
+                        wisata murah, sampai tempat nongkrong gratis.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN 5 — REKOMENDASI
+    ========================== -->
+
+    <section class="recommendations" id="rekomendasi">
+
+        <div class="container">
+
+            <div class="reveal">
+
+                <div class="label">
+                    Jakarta Picks
+                </div>
+
+                <h2 class="section-title">
+                    Places worth<br>
+                    remembering.
+                </h2>
+
+                <p class="recommendation-intro">
+                    Berikut beberapa rekomendasi tempat di Jakarta
+                    yang bisa menjadi inspirasi untuk kuliner,
+                    jalan-jalan, refreshing, maupun mengisi
+                    waktu luang setelah kuliah.
+                </p>
+
+            </div>
+
+
+            <div class="place-grid">
+
+
+                <!-- CAFE BATAVIA -->
+
+                <article class="place-card reveal">
+
+                    <img
+                        class="place-image"
+                        src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80"
+                        alt="Cafe dan coffee shop">
+
+                    <div class="place-content">
+
+                        <span class="tag">
+                            ☕ Cafe & Kuliner
+                        </span>
+
+                        <h3>
+                            Café Batavia
+                        </h3>
+
+                        <p>
+                            Salah satu pilihan menarik untuk menikmati
+                            suasana klasik di kawasan Kota Tua Jakarta.
+                            Cocok untuk menikmati suasana vintage,
+                            kuliner, dan berburu foto.
+                        </p>
+
+                        <div class="place-info">
+                            📍 Kota Tua, Jakarta Barat
+                            <br>
+                            💰 Kisaran: Menyesuaikan menu
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TAMAN LANGSAT -->
+
+                <article class="place-card reveal">
+
+                    <img
+                        class="place-image"
+                        src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80"
+                        alt="Taman hijau">
+
+                    <div class="place-content">
+
+                        <span class="tag">
+                            📍 Hidden Gem
+                        </span>
+
+                        <h3>
+                            Taman Langsat
+                        </h3>
+
+                        <p>
+                            Taman hijau di kawasan Jakarta Selatan
+                            yang cocok untuk jalan santai,
+                            duduk menikmati pepohonan,
+                            atau sekadar mencari suasana berbeda.
+                        </p>
+
+                        <div class="place-info">
+                            📍 Kebayoran Baru, Jakarta Selatan
+                            <br>
+                            💰 Budget: Sangat ramah kantong
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- HUTAN KOTA GBK -->
+
+                <article class="place-card reveal">
+
+                    <img
+                        class="place-image"
+                        src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80"
+                        alt="Hutan dan ruang hijau">
+
+                    <div class="place-content">
+
+                        <span class="tag">
+                            🌿 Healing & Leisure
+                        </span>
+
+                        <h3>
+                            Hutan Kota GBK
+                        </h3>
+
+                        <p>
+                            Ruang hijau di tengah kota yang bisa
+                            digunakan untuk berjalan santai,
+                            duduk, menikmati pemandangan,
+                            atau melepas penat setelah aktivitas kampus.
+                        </p>
+
+                        <div class="place-info">
+                            📍 Senayan, Jakarta Pusat
+                            <br>
+                            💰 Budget: Ramah kantong
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TAMAN LITERASI -->
+
+                <article class="place-card reveal">
+
+                    <img
+                        class="place-image"
+                        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+                        alt="Ruang membaca dan taman">
+
+                    <div class="place-content">
+
+                        <span class="tag">
+                            💸 Budget-Friendly
+                        </span>
+
+                        <h3>
+                            Taman Literasi Blok M
+                        </h3>
+
+                        <p>
+                            Tempat yang cocok untuk membaca,
+                            mengerjakan tugas, duduk santai,
+                            atau menikmati ruang publik
+                            bersama teman.
+                        </p>
+
+                        <div class="place-info">
+                            📍 Blok M, Jakarta Selatan
+                            <br>
+                            💰 Budget: Murah / ruang publik
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BLOK M -->
+
+                <article class="place-card reveal">
+
+                    <img
+                        class="place-image"
+                        src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80"
+                        alt="Kuliner dan restoran">
+
+                    <div class="place-content">
+
+                        <span class="tag">
+                            ☕ Cafe & Kuliner
+                        </span>
+
+                        <h3>
+                            Jajan Lokal Blok M
+                        </h3>
+
+                        <p>
+                            Blok M bisa menjadi pilihan untuk
+                            berburu makanan dan jajanan lokal.
+                            Cocok untuk membuat konten
+                            kuliner dengan budget mahasiswa.
+                        </p>
+
+                        <div class="place-info">
+                            📍 Blok M, Jakarta Selatan
+                            <br>
+                            💰 Budget: ± Rp20.000 – Rp50.000
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- KOTA TUA -->
+
+                <article class="place-card reveal">
+
+                    <img
+                        class="place-image"
+                        src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80"
+                        alt="Kawasan kota tua">
+
+                    <div class="place-content">
+
+                        <span class="tag">
+                            💸 Budget-Friendly
+                        </span>
+
+                        <h3>
+                            Kota Tua Jakarta
+                        </h3>
+
+                        <p>
+                            Pilihan jalan-jalan hemat untuk menikmati
+                            bangunan bersejarah, berfoto,
+                            berjalan kaki, dan mengeksplorasi
+                            berbagai sudut kawasan Kota Tua.
+                        </p>
+
+                        <div class="place-info">
+                            📍 Kota Tua, Jakarta Barat
+                            <br>
+                            💰 Budget: Bisa disesuaikan
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HALAMAN PENUTUP
+    ========================== -->
+
+    <section class="quote">
+
+        <div class="container reveal">
+
+            <div class="label">
+                Until Next Story
+            </div>
+
+            <h2>
+                See you<br>
+                around <em>Jakarta.</em>
+            </h2>
+
+            <p>
+                Setiap sudut kota punya cerita.
+                Tinggal melangkah sedikit lebih jauh
+                untuk menemukannya.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        © 2026 Syarifah Ni'mah
+        · Personal Blog
+        · Hidden Gem & Lifestyle Lokal
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT ANIMASI
+    ========================== -->
+
+    <script>
+
+        const observer = new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("active");
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.15
+            }
+
+        );
+
+
+        document
+            .querySelectorAll(".reveal")
+            .forEach((element) => {
+
+                observer.observe(element);
+
+            });
+
+    </script>
+
+</body>
+</html>
